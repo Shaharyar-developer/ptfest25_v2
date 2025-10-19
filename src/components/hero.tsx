@@ -73,7 +73,7 @@ const CARDS = [
 export const Hero = () => {
   return (
     <div className="w-full mx-auto flex flex-col items-center justify-center container">
-      <div className="flex flex-col items-center justify-center h-[20vh] md:h-[20vh]">
+      <div className="flex flex-col items-center justify-center h-[20vh] md:h-[20vh] ">
         <Suspense>
           <Globe />
         </Suspense>

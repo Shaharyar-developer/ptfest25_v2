@@ -22,8 +22,8 @@ type COBEOptionsWithNames = Omit<COBEOptions, "markers"> & {
 };
 
 const GLOBE_CONFIG: COBEOptionsWithNames = {
-  width: 800,
-  height: 800,
+  width: 500,
+  height: 500,
   onRender: () => {},
   devicePixelRatio: 2,
   phi: 0,
@@ -274,7 +274,7 @@ export function Globe({
   return (
     <div className={cn("relative mx-auto", className)}>
       {/* Globe Canvas */}
-      <div className="relative aspect-square w-full max-w-[600px] mx-auto">
+      <div className="relative aspect-square w-full max-w-[500px] mx-auto">
         <canvas
           className="size-full opacity-0 transition-opacity duration-500 [contain:layout_paint_size]"
           ref={canvasRef}
