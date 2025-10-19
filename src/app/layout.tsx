@@ -1,7 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
-// @ts-expect-error fuck the LSP
 import "./globals.css";
 import { ThemeProvider } from "next-themes";
 
