@@ -68,10 +68,10 @@ export const ExecutiveCouncilSection = () => {
             </div>
             <Link
               href={"tel:+923144289959"}
-              className="flex max-w-max mx-auto transition-all text-muted-foreground text-center translate-y-full text-xs"
+              className="flex flex-wrap mb-4 sm:mb-0 max-w-max mx-auto transition-all text-muted-foreground text-center translate-y-full text-xs"
             >
-              And the one bringing to you, all this magic:{" "}
-              <strong>M. Shaharyar</strong>, +92 314 4289959
+              And the one bringing to you, all this magic:
+              <strong>M. Shaharyar</strong> +92 314 4289959
             </Link>
           </BlurFade>
         </div>

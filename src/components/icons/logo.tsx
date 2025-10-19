@@ -64,7 +64,7 @@ export const Logo = () => {
       variants={container}
       initial="hidden"
       animate={"show"}
-      className="absolute top-0 left-1/2 -translate-x-1/2 overflow-hidden z-50"
+      className="absolute left-1/2 -translate-x-1/2 overflow-hidden z-50 size-96"
       width="500"
       stroke="transparent"
       fill={"transparent"}
