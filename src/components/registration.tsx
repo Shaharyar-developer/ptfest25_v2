@@ -20,11 +20,11 @@ export const RegistrationSection = () => {
         <BlurFade inView viewport={{ once: true }} className="px-2 relative">
           <div className="lg:sticky lg:top-28 ml-2 h-fit">
             <h2 className="text-3xl font-bold mb-4 text-primary">
-              <GradientText text="Registrations" />
+              <GradientText text="Registration" />
             </h2>
             <p className="text-muted-foreground text-sm">
-              Everything you need to secure your spot at PTMUN VI, from forms to
-              contact leads.
+              Everything you need to join PTFest 2025, from forms to contact
+              leads.
             </p>
           </div>
         </BlurFade>

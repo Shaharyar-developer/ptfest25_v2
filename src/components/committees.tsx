@@ -22,10 +22,11 @@ export const CommitteesShowcase = () => {
         <BlurFade inView viewport={{ once: true }} className="px-2 relative">
           <div className="lg:sticky lg:top-28 ml-2 h-fit">
             <h2 className="text-3xl font-bold mb-4 text-primary">
-              <GradientText text="Committees" />
+              <GradientText text="Sports" />
             </h2>
             <p className="text-muted-foreground text-sm">
-              Explore the committees featured at this conference.
+              Explore the sports featured at PTFest 2025 with complete rules and
+              regulations.
             </p>
           </div>
         </BlurFade>
@@ -44,16 +45,7 @@ export const CommitteesShowcase = () => {
                 <BlurFade inView viewport={{ once: true }}>
                   <AccordionTrigger className="p-4 text-left">
                     <div className="flex items-center gap-4">
-                      <Image
-                        src={committee.logo}
-                        alt={`${committee.name} logo`}
-                        width={40}
-                        height={40}
-                        className="shrink-0 invert dark:invert-0"
-                        loading="lazy"
-                        quality={75}
-                        sizes="40px"
-                      />
+                      <div>{committee.logo}</div>
                       <div>
                         <h3 className="text-base font-semibold">
                           {committee.name}

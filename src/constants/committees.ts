@@ -1,59 +1,63 @@
-import crisis from "@/components/icons/crisis.png";
-import pna from "@/components/icons/pna.png";
-import un from "@/components/icons/un.png";
-import uncsw from "@/components/icons/uncsw.png";
-import unhrc from "@/components/icons/unhrc.png";
+import { GiBasketballBasket } from "react-icons/gi";
+import { GiSoccerKick } from "react-icons/gi";
+import { BiCricketBall } from "react-icons/bi";
+import { PiVolleyball } from "react-icons/pi";
+import { GiShuttlecock } from "react-icons/gi";
 
 export const committees = [
   {
-    name: "UNSC - DUAL",
-    description: "United Nations Security Council",
-    logo: un,
+    name: "Futsal",
+    description: "Fast-paced indoor soccer action",
+    logo: GiSoccerKick,
     content: [
-      "UNSC - DUAL pairs delegates, challenging them to synchronize strategy while representing their state in the council’s premier security forum.",
-      "The committee mirrors real-world UNSC protocol, complete with veto dynamics, emergency consultations, and rapid position drafting under pressure.",
-      "Ideal for confident speakers seeking a collaborative edge, the format rewards coordination, sharp analysis, and decisive diplomacy.",
+      "Futsal is a high-energy indoor soccer variant with 5 players per side and a smaller, heavier ball.",
+      "All matches are knockout-based with 20-minute durations. In case of a draw, the match is decided through penalties.",
+      "Maximum 8 players per team (5 playing, 3 substitutes). Teams must report 10 minutes before their match. Studs are not allowed.",
+      "The decision of the referee is final. The winning team advances to the next round in the knockout tournament.",
     ],
   },
   {
-    name: "CRISIS",
-    description: "Rapid Response Crisis Committee",
-    logo: crisis,
+    name: "Basketball",
+    description: "Dynamic court competition with 5v5 action",
+    logo: GiBasketballBasket,
     content: [
-      "CRISIS throws delegates into unfolding scenarios where briefings evolve and consequences arrive swiftly.",
-      "Participants must craft creative directives, negotiate alliances on the fly, and adapt as the arc twists with every update.",
-      "High stakes and fast pacing make this the perfect arena for delegates who thrive on improvisation and bold decision-making.",
+      "Basketball matches feature 5 players per side with up to 3 substitutes. Regular matches are 20 minutes (4 quarters of 5 minutes), while finals extend to 40 minutes (4 quarters of 10 minutes).",
+      "All FIBA rules apply, including the 3-second rule and running clock throughout the match. Each team is allowed 2 timeouts per match.",
+      "5 personal fouls result in a player's ejection. If a team commits four team fouls in the 4th quarter, each additional foul results in 2 free throws.",
+      "Teams compete in a knockout format, with the strongest teams advancing to championship matches.",
     ],
   },
   {
-    name: "PNA",
-    description: "Pakistan National Assembly",
-    logo: pna,
+    name: "Cricket",
+    description: "Traditional cricket in fast-paced format",
+    logo: BiCricketBall,
     content: [
-      "PNA simulates Pakistan’s parliament, blending legislative debate with the energy of real-world political theatre.",
-      "Delegates juggle bilingual rhetoric, constituency interests, and coalition building to shepherd bills through the house.",
-      "Expect spirited floor action, whip counts, and media scrutiny that test both policy depth and street-smart negotiation.",
+      "Cricket matches feature 8 players on the field with a maximum of 3 substitutes. Games consist of 3 overs, while the final has 4 overs.",
+      "All extras count except byes and LBWs. Each bowler can bowl a maximum of 1 over (except in the final where one bowler can bowl 2 overs).",
+      "No-balls result in free hits. Only one bouncer is allowed per over; any additional bouncer is a no-ball.",
+      "Matches are knockout-based with the umpire's decision being final. Misbehavior with the umpire may result in team disqualification.",
     ],
   },
   {
-    name: "UNHRC",
-    description: "United Nations Human Rights Council",
-    logo: unhrc,
+    name: "Volleyball",
+    description: "High-flying net game with teamwork focus",
+    logo: PiVolleyball,
     content: [
-      "UNHRC examines global rights violations through investigative debate and resolution-building rooted in international law.",
-      "Delegates must balance principled advocacy with pragmatic compromise to rally broad coalitions around protective measures.",
-      "The agenda demands empathy, rigorous research, and diplomatic tact to champion vulnerable communities worldwide.",
+      "Volleyball matches are best-of-3 sets with each set won by reaching 25 points with a 2-point lead.",
+      "Each team has 6 players (3 in front row, 3 in back row). Teams can touch the ball up to 3 times before returning it; no consecutive touches by the same player.",
+      "Catching or holding the ball is not allowed. Let serves (net touches but lands in) are valid, while fault serves result in a retry.",
+      "Competition focuses on teamwork, precision, and strategic play to advance through the tournament.",
     ],
   },
   {
-    name: "UNW",
-    description: "United Nations Women",
-    logo: uncsw,
+    name: "Badminton",
+    description: "Precision racquet sport",
+    logo: GiShuttlecock,
     content: [
-      "UNW spotlights gender equality, examining structural barriers and breakthrough policies empowering women and girls.",
-      "Sessions blend data-driven briefings with stakeholder testimonies, pushing delegates to craft intersectional, actionable outcomes.",
-      "Advocates gain a platform to advance inclusive development, leadership, and justice through persuasive multilateral dialogue.",
+      "Badminton competition commences with a coin toss. The winner chooses either the side or first service.",
+      "The side gallery is out of bounds, while the back gallery is in bounds. Service must be diagonal and land beyond the service line.",
+      "For odd scores (1, 3, 5), serve from the left; for even scores, serve from the right. Service must be below waistline or it's a foul.",
+      "Players compete in knockout format, with matches advancing through rounds of increasing difficulty and skill.",
     ],
   },
 ] as const;
-   

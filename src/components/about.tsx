@@ -16,11 +16,11 @@ export const About = () => {
         <BlurFade inView viewport={{ once: true }} className="px-2 relative">
           <div className="lg:sticky lg:top-28 h-fit ml-2">
             <h2 className="text-3xl font-bold mb-4 text-primary">
-              <GradientText text="About PTMUN" />
+              <GradientText text="About PTFest" />
             </h2>
             <p className="text-muted-foreground text-sm">
-              Get to know the story, vision, and experience behind the
-              conference.
+              Get to know the story, vision, and athletic excellence behind the
+              event.
             </p>
           </div>
         </BlurFade>

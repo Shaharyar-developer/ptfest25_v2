@@ -22,7 +22,7 @@ export const InvitationSection = () => {
               <GradientText text={title} />
             </h2>
             <p className="text-muted-foreground text-sm">
-              A warm welcome to PTMUN VI and everything the 2025 edition stands
+              A warm welcome to PTFEST'25 and everything the 2025 edition stands
               for.
             </p>
           </div>
@@ -44,7 +44,7 @@ export const InvitationSection = () => {
               </Badge>
               <div className="flex items-center gap-2 text-sm text-muted-foreground">
                 <Sparkles className="size-4" />
-                Celebrating diplomacy since day one
+                Three days of athletic excellence
               </div>
             </div>
 
@@ -63,7 +63,7 @@ export const InvitationSection = () => {
                   <CalendarDays className="size-5 text-primary" />
                   <div>
                     <p className="text-xs uppercase tracking-wide text-muted-foreground">
-                      Conference Dates
+                      Event Dates
                     </p>
                     <p className="text-sm font-medium text-foreground">
                       {dates}
@@ -89,7 +89,7 @@ export const InvitationSection = () => {
             <div className="flex flex-wrap items-center gap-3 text-sm text-muted-foreground">
               <span className="font-medium text-foreground">Connect:</span>
               <Link
-                href="https://www.instagram.com/ptmun.vi/"
+                href="https://www.instagram.com/ptfest25/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-primary transition-colors"
@@ -116,16 +116,7 @@ export const InvitationSection = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Start a Delegation
-                </Link>
-              </Button>
-              <Button asChild variant="outline">
-                <Link
-                  href={registrationDetails.forms[1].href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Register as Delegate
+                  Register a Team
                 </Link>
               </Button>
             </div>

@@ -1,43 +1,44 @@
 export const invitationCopy = {
   title: "Invitation",
-  tagline: "Let Diplomacy Prevail",
+  tagline: "Where Athletics Meet Excellence",
   campus: "Pak-Turk Maarif Boys Campus, Lahore",
-  dates: "31 October – 2 November 2025",
-  greeting: "Respected Visitor,",
+  dates: "21-23 November 2025",
+  greeting: "Esteemed Participants & Spectators,",
   paragraphs: [
-    "We are pleased to invite you to the sixth edition of Pak-Turk Maarif Model United Nations (PTMUN VI).",
-    "Hosted at the Pak-Turk Maarif Boys Campus in Lahore, the conference convenes from 31 October to 2 November 2025 for three days of meaningful debate, insightful dialogue, and vibrant socials.",
-    "PTMUN remains the flagship society at Pak-Turk Maarif and a pioneer of Lahore's Model United Nations culture, inspiring responsible global citizens through inclusive policy discourse.",
-    "This year's theme focuses on UN Sustainable Development Goal 16, promoting peace, justice, and strong institutions across every committee floor.",
-    "We look forward to welcoming you to an enriching and impactful experience that empowers delegates to let diplomacy prevail.",
+    "Pak-Turk Maarif International Schools proudly present PTFest 2025, a spectacular three-day sports extravaganza celebrating athleticism, teamwork, and school spirit.",
+    "Hosted at the Pak-Turk Maarif Boys Campus in Lahore from 21-23 November 2025, PTFest brings together students from leading institutions across Lahore to compete, collaborate, and excel in a dynamic environment of rivalry and camaraderie.",
+    "This annual event showcases the finest in competitive sports, featuring over 12 thrilling activities from traditional sports to esports and mind games.",
+    "Participating schools include LGS, BSS, LACAS, CITI, ROOTS, PGC, SICAS, and Aitchison, creating an unforgettable experience for both athletes and spectators.",
+    "Join us for three days of unparalleled athletic excellence, sportsmanship, and celebration as we transform our campus into a vibrant arena buzzing with energy and passion.",
   ],
   socials: {
-    instagram: "@ptmun.vi",
-    website: "ptmun.com",
+    instagram: "@ptfest25",
+    website: "ptfest.com",
   },
 };
 
 export const registrationDetails = {
   forms: [
     {
-      label: "Delegation Registration",
-      href: "https://forms.gle/GoMmq8Cjk8pNbFQB7",
+      label: "Team Registration",
+      href: "https://forms.gle/VdQXyDo4DeGC4TXWA",
     },
     {
-      label: "Delegate Registration",
-      href: "https://forms.gle/hioqtKKqxcYvBKmo9",
+      label: "Individual Registration",
+      href: "https://forms.gle/VdQXyDo4DeGC4TXWA",
     },
   ],
   guidelines: [
-    "Delegate and delegation registration forms are available on the official website.",
-    "Registrations are confirmed only once payments are received and verified by the Registrations Team.",
-    "All payments made towards PTMUN VI are strictly non-refundable.",
+    "Team and individual registration forms are available through the official PTFest portal.",
+    "Registrations are confirmed only once payment is received and verified by the Registrations Team.",
+    "All payments made towards PTFest 2025 are strictly non-refundable.",
+    "Each team must adhere to sport-specific rules and regulations outlined in the guidelines.",
   ],
   payments: [
     {
       method: "Cash",
       description:
-        "Submit directly to any Director of Registrations for instant confirmation.",
+        "Submit directly to the Sports Manager or any Event Head for instant confirmation.",
     },
     {
       method: "Online",
@@ -46,88 +47,81 @@ export const registrationDetails = {
     },
   ],
   highlight: {
-    earlyBirdDeadline: "Early bird window closes on 18 October 2025",
+    earlyBirdDeadline: "Registration closes on 15 November 2025",
   },
 };
 
 export const feeStructure = [
   {
-    title: "Early Bird",
-    caption: "Valid till 18 October",
+    title: "Early Registration",
+    caption: "Valid till 8 November",
     items: [
-      { label: "Delegate Fee", value: "PKR 2,500" },
-      { label: "Delegation Fee", value: "PKR 3,000" },
+      { label: "Individual Entry", value: "PKR 1,500" },
+      { label: "Team Entry (5 Players)", value: "PKR 5,000" },
     ],
   },
   {
     title: "Regular Registrations",
-    caption: "Applies after 18 October",
+    caption: "Applies after 8 November",
     items: [
-      { label: "Delegate Fee", value: "PKR 3,000" },
-      { label: "Delegation Fee", value: "PKR 3,500" },
+      { label: "Individual Entry", value: "PKR 2,000" },
+      { label: "Team Entry (5 Players)", value: "PKR 6,500" },
     ],
   },
 ];
 
 export const awardInformation = {
   policy: [
-    "All awards are determined solely on delegate performance, with transparency as the foremost priority.",
-    "Junior Category points do not contribute to the Best Delegation race, and no gavels are presented for Junior Awards.",
+    "All awards are determined solely on athletic performance, with transparency and fair play as the foremost priority.",
+    "Winners are recognized based on official results certified by sport referees and judges.",
   ],
   perCommittee: {
-    senior: ["1 × Best Delegate Award", "2 × Outstanding Diplomacy Awards"],
-    junior: ["1 × Best Delegate Award", "1 × Outstanding Diplomacy Award"],
-    note: "Honourable Mention and Special Mention Awards may be presented at the discretion of the dais.",
+    senior: ["1 × Champion Team/Player", "2 × Runner-Up Awards"],
+    junior: ["1 × Champion Team/Player", "1 × Runner-Up Award"],
+    note: "Best Sportsmanship Awards may be presented at the discretion of the organizing committee.",
   },
   delegationAwards: [
-    "1 × Best Delegation Award",
-    "1 × Runners-Up Delegation Award",
+    "1 × Best Overall School Award",
+    "1 × Most Improved Team Award",
   ],
-  categories: [
-    "Junior Category: Aged 14 and below",
-    "Senior Category: Aged 15 and above",
-  ],
+  categories: ["Boys Category", "Girls Category"],
   points: {
     structure: [
-      "Best Delegate Award: 3 points",
-      "Outstanding Diplomacy Award: 2 points",
-      "Honourable Mention Award: 1 point",
+      "Champion: 10 points",
+      "Runner-Up: 7 points",
+      "Third Place: 5 points",
     ],
     notes: [
-      "Delegations may face point deductions if serious equity concerns are validated by the Executive Council.",
-      "Junior Category awards are not credited towards delegation points.",
+      "Schools may face point deductions if serious violations of code of conduct are validated by the Executive Council.",
+      "Overall school standings are calculated based on cumulative points across all sports.",
     ],
   },
 };
 
 export const registrationTeam = [
-  { name: "Aayan Sami", phone: "+92 317 4627807" },
-  { name: "Ayyan Jamshaid", phone: "+92 310 4167474" },
-  { name: "Jabeeha Saad", phone: "+92 310 4166169" },
-  { name: "Raania Salman", phone: "+92 322 7849989" },
+  { name: "Naeem Shahzad", phone: "+92 300 4834443", role: "Sports Manager" },
+  { name: "Ahmed Akmal", phone: "+92 325 1982875", role: "Event Coordinator" },
+  { name: "Ibrahim Tanveer", phone: "+92 319 6764127", role: "Director" },
+  { name: "Nade Ali", phone: "+92 317 7480201", role: "Director" },
 ];
 
 export const executiveCouncil = [
   {
-    role: "President",
+    role: "Event Head",
     members: [
-      { name: "M. Saad Qureshi", phone: "+92 300 4235302" },
-      { name: "Minahil Ijaz", phone: "+92 305 4310599" },
+      { name: "Saad Qureshi", phone: "+92 300 4235302" },
+      { name: "Abdul Basit", phone: "+92 300 4662639" },
     ],
   },
   {
-    role: "Secretary General",
+    role: "Event Co-Head",
     members: [
-      { name: "Eeshan Ahmed Raza", phone: "+92 300 7401053" },
-      { name: "Ahmed Ikramullah Javed", phone: "+92 317 7126251" },
-      { name: "Fajar Khalid", phone: "+92 303 5565303" },
+      { name: "Saifullah", phone: "+92 317 2998241" },
+      { name: "Awais Khan", phone: "+92 334 7882117" },
     ],
   },
   {
-    role: "Director General",
-    members: [
-      { name: "Affan Ghani", phone: "+92 306 4188329" },
-      { name: "Mominah Salman", phone: "+92 318 3098358" },
-    ],
+    role: "Sports Manager",
+    members: [{ name: "Naeem Shahzad", phone: "+92 300 4834443" }],
   },
 ];

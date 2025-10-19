@@ -123,21 +123,21 @@ function StarsBackground({
     () => [
       {
         key: "layer-1",
-        count: prefersReducedMotion ? 80 : 140,
+        count: prefersReducedMotion ? 80 : 300,
         size: 1,
         duration: speed,
         color: "#7FB5FF",
       },
       {
         key: "layer-2",
-        count: prefersReducedMotion ? 40 : 90,
+        count: prefersReducedMotion ? 40 : 150,
         size: 1.75,
         duration: speed * 1.8,
         color: "#7FB5FF",
       },
       {
         key: "layer-3",
-        count: prefersReducedMotion ? 20 : 50,
+        count: prefersReducedMotion ? 20 : 90,
         size: 2.5,
         duration: speed * 2.6,
         color: starColor,

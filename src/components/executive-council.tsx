@@ -14,10 +14,10 @@ export const ExecutiveCouncilSection = () => {
         <BlurFade inView viewport={{ once: true }} className="px-2 relative">
           <div className="lg:sticky lg:top-28 ml-2 h-fit">
             <h2 className="text-3xl font-bold mb-4 text-primary">
-              <GradientText text="Executive Council" />
+              <GradientText text="Event Leadership" />
             </h2>
             <p className="text-muted-foreground text-sm">
-              Reach out to the leadership team guiding PTMUN VI.
+              Reach out to the leadership team organizing PTFest 2025.
             </p>
           </div>
         </BlurFade>
@@ -30,10 +30,10 @@ export const ExecutiveCouncilSection = () => {
             className="rounded-3xl border border-border/20 bg-foreground/5 backdrop-blur-3xl p-6 group"
           >
             <div className="flex flex-wrap items-center gap-3 mb-4">
-              <Badge variant="outline">Guidance & Support</Badge>
+              <Badge variant="outline">Leadership & Organization</Badge>
               <div className="flex items-center gap-2 text-sm text-muted-foreground">
                 <Users className="size-4" />
-                We're one call away
+                The team behind PTFest
               </div>
             </div>
             <div className="grid gap-4 sm:grid-cols-3">
@@ -66,10 +66,13 @@ export const ExecutiveCouncilSection = () => {
                 </div>
               ))}
             </div>
-            <div className="group-hover:opacity-100 opacity-0 transition-all text-muted-foreground text-center group-hover:translate-y-2/3 translate-y-full text-xs">
+            <Link
+              href={"tel:+923144289959"}
+              className="flex max-w-max mx-auto transition-all text-muted-foreground text-center translate-y-full text-xs"
+            >
               And the one bringing to you, all this magic:{" "}
               <strong>M. Shaharyar</strong>, +92 314 4289959
-            </div>
+            </Link>
           </BlurFade>
         </div>
       </div>

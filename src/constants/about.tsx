@@ -10,78 +10,91 @@ import {
 
 export type CodeOfConduct = typeof codeOfConduct;
 export const codeOfConduct = {
-  title: "Code of Conduct",
+  title: "Code of Conduct & Rules",
   categories: [
     {
-      heading: "General Conduct",
+      heading: "Fair Play & Sportsmanship",
       icon: <Handshake size={24} />,
-      description:
-        "Basic guidelines for respectful behaviour towards all participants.",
+      description: "Core principles of ethical athletic competition.",
       rules: [
-        "All attendees, delegates, and team members are expected to strictly adhere to this Code of Conduct throughout every PTMUN-related activity.",
-        "All participants are responsible for their own behaviour to ensure a successful conference; all participants must act in a manner respectful of the rights of others.",
-        "Rude, disrespectful, cruel, or otherwise offensive behaviour towards any delegate, staff member, or guest will not be tolerated in or outside of the committee.",
-        "Harassment of any individual based on a person's race, gender, sexual orientation, ethnicity, religion, disability, national origin, appearance or any other criteria is strictly prohibited.",
-        "Bullying, name-calling and any form of hazing are also prohibited.",
-        "Inappropriate and/or uninvited physical contact between any delegate, staff member, or guest is not allowed.",
-        "A formal manner of behaviour must be applied to all actions; delegates must sit up straight and be hygienic.",
+        "All athletes, teams, and spectators must adhere to this Code of Conduct throughout all PTFest 2025 activities.",
+        "All participants are responsible for respectful behavior towards other teams, officials, and spectators.",
+        "Disrespectful, abusive, or offensive behavior towards any athlete, official, or guest will not be tolerated.",
+        "Harassment of any individual based on race, gender, ethnicity, religion, disability, or any other criteria is strictly prohibited.",
+        "Bullying, taunting, unsportsmanlike conduct, and aggressive behavior are not allowed.",
+        "Players must accept referee/umpire decisions with respect. Arguing or questioning official decisions will result in penalties.",
+        "Good sportsmanship includes congratulating opponents and celebrating wins humbly.",
       ],
     },
     {
-      heading: "Facilities and Property",
+      heading: "Facilities and Equipment",
       icon: <Library size={24} />,
-      description:
-        "Respect for PTMUN facilities and property to ensure continued use.",
+      description: "Proper use of PTFest venues and sporting equipment.",
       rules: [
-        "All PTMUN facilities are to be treated with respect and care at all times. The use of these facilities is a privilege, and your behaviour towards them directly impacts our ability to use them in the future.",
-        "Any act of vandalism, destruction of property, or misuse of a facility may be considered a crime and will be treated as such.",
+        "All PTFest facilities, equipment, and grounds must be treated with respect and care.",
+        "Any act of vandalism, property damage, or misuse of facilities will result in disciplinary action and potential liability.",
+        "Teams must properly store and return all borrowed equipment after use.",
+        "Participants must maintain cleanliness of facilities and grounds during and after activities.",
       ],
     },
     {
-      heading: "Prohibited Items and Substances",
+      heading: "Prohibited Conduct",
       icon: <Ban size={24} />,
-      description:
-        "A list of items and substances that are forbidden during the event.",
+      description: "Actions and items that are strictly forbidden.",
       rules: [
-        "The consumption and/or possession of alcohol, pod, vape, cigarettes, or any type of intoxicants is strictly prohibited and if confiscated, will not be returned. Similarly, the possession or use of illegal drugs by any individual is not allowed under any circumstances. ",
-        "Weapons of any kind, along with items that could cause injury or damage to participants or property, are also strictly forbidden. Additionally, the discovery of any inappropriate items may result in the immediate cancellation of the individual's registration.",
+        "Consumption and/or possession of alcohol, cigarettes, vapes, or any intoxicants is strictly prohibited and grounds for disqualification.",
+        "Illegal drugs and controlled substances are absolutely forbidden.",
+        "Weapons of any kind are strictly prohibited.",
+        "Physical violence, aggressive contact beyond sport rules, or intentionally injuring opponents will result in immediate disqualification.",
+        "Any participant found violating these rules may face expulsion from the event and referral to parents/guardians.",
       ],
     },
     {
       heading: "Safety and Health",
       icon: <Shield size={24} />,
-      description:
-        "Measures to ensure the safety and well-being of all participants.",
+      description: "Measures to ensure the well-being of all participants.",
       rules: [
-        "Activities that endanger the health or safety of yourself or others are prohibited.",
-        "For safety reasons, all PTMUN participants must wear their assigned passes at all times and keep them visible.",
+        "All athletes must follow sport-specific safety rules and regulations to prevent injuries.",
+        "Unsafe play, reckless behavior, or deliberate fouls that endanger others are strictly prohibited.",
+        "All participants must wear identification passes at all times.",
+        "Report any injuries or health emergencies immediately to event staff.",
+        "Medical facilities are available on-site for all participants.",
       ],
     },
     {
-      heading: "Dress Code and Appearance",
+      heading: "Attire and Equipment Standards",
       icon: <Shirt size={24} />,
-      description: "Guidelines on proper attire for the event and ceremonies.",
+      description: "Guidelines for proper athletic attire.",
       rules: [
-        "The minimum standard of dress required is business casual, and participants are encouraged to wear either Western or Eastern Business Attire. The dress code is mandatory during all committee sessions, as well as for the opening and closing ceremonies.",
-        "We kindly ask all participants to ensure their clothing is dignified and appropriate for a professional setting. Choices that uphold a polished, formal appearance are preferred to maintain the decorum of the event.",
+        "Athletes must wear appropriate sports clothing and footwear as per each sport's requirements.",
+        "Uniforms or team colors are required for team events.",
+        "Protective equipment (if required by the sport) must be worn during all matches.",
+        "Cleats and specialized footwear must comply with sport regulations.",
+        "Spectators are encouraged to wear school colors and team jerseys.",
       ],
     },
     {
       heading: "Attendance and Punctuality",
       icon: <Clock size={24} />,
-      description:
-        "Expectations regarding attendance and timeliness during sessions.",
+      description: "Requirements for timely participation in matches.",
       rules: [
-        "Delegates must be present and punctual for all committee sessions.",
+        "Teams must arrive at their designated match times as per the schedule.",
+        "Late arrival may result in forfeiture or penalty at the discretion of match officials.",
+        "All team members must be present for team photos and opening ceremonies.",
+        "Absences must be reported to event coordinators in advance when possible.",
       ],
     },
     {
-      heading: "Disciplinary Actions",
+      heading: "Enforcement and Penalties",
       icon: <Scale size={24} />,
       description: "Consequences for violating the code of conduct.",
       rules: [
-        "Derogation from any of the following rules may result in disciplinary action deemed appropriate by PTMUN's staff.",
-        "Contravention of these rules may induce immediate expulsion from PTMUN activities, payment for damages, notification of parents, guardians, or institutions, and contacting law enforcement if necessary.",
+        "Violations may result in warnings, penalties, suspension from matches, or disqualification.",
+        "Match officials have the authority to issue yellow and red cards in applicable sports.",
+        "Serious violations may result in immediate disqualification from PTFest 2025.",
+        "Event organizers reserve the right to disqualify any participant or team for serious misconduct.",
+        "Parents/guardians will be notified of any serious violations or disciplinary actions.",
+        "All decisions by officials are final and binding.",
       ],
     },
   ],
@@ -90,27 +103,27 @@ export const codeOfConduct = {
 export type About = typeof about;
 export const about = [
   {
-    heading: "PTMUN VI Overview",
+    heading: "PTFest 2025 Overview",
     content: [
-      "We are pleased to invite you to the sixth edition of Pak-Turk Maarif Model United Nations (PTMUN VI).",
-      "Taking place from 31 October to 2 November 2025 at the Pak-Turk Maarif Boys Campus in Lahore, the conference welcomes delegations to three days of debate, dialogue, and dynamic socials.",
-      "Let Diplomacy Prevail as the campus transforms into a hub for collaborative policy-making and impactful international discourse.",
+      "PTFest 2025 is a premier three-day sports extravaganza organized by Pak-Turk Maarif International Schools.",
+      "Taking place from 21-23 November 2025 at the Pak-Turk Maarif Boys Campus in Lahore, the event welcomes athletes from leading schools across the city to compete in over 12 thrilling sports and activities.",
+      "Experience Excellence as the campus transforms into a hub for competitive sports, athletic achievement, and school pride.",
     ],
   },
   {
-    heading: "Theme and Vision",
+    heading: "Sports & Activities",
     content: [
-      "This year's theme is rooted in UN Sustainable Development Goal 16, championing peace, justice, and strong institutions.",
-      "PTMUN VI encourages delegates to become responsible global citizens, advocates for inclusive policy-making, and stewards of transparent governance.",
-      "The conference continues to set the benchmark for Lahore's MUN circuit by blending academic rigour with a commitment to community impact.",
+      "PTFest 2025 features a diverse range of sports including Futsal, Basketball, Cricket, Volleyball, Badminton, and more.",
+      "Beyond traditional sports, the event showcases esports competitions (FIFA and Tekken), mind games (Chess, Ludo, Snooker), and physical challenges (Strongman, Tug of War).",
+      "From team sports to individual competitions, there's something for every athlete to showcase their talent and passion.",
     ],
   },
   {
-    heading: "Conference Experience",
+    heading: "Community & Values",
     content: [
-      "Across three immersive days, PTMUN VI delivers rigorous committee sessions, moderated caucuses, and real-time crisis simulations that challenge delegates to think on their feet.",
-      "Beyond debate, the experience features cultural nights, networking dinners, and social events that celebrate the spirit of collaboration.",
-      "Whether you're a seasoned delegate or a first-timer, PTMUN remains a tradition that inspires young leaders to dream beyond borders.",
+      "PTFest celebrates athleticism, teamwork, sportsmanship, and school spirit among participating institutions including LGS, BSS, LACAS, CITI, ROOTS, PGC, SICAS, and Aitchison.",
+      "The event promotes values of fair play, collaboration, and healthy competition while creating unforgettable memories for athletes and spectators alike.",
+      "Whether you're competing or cheering, PTFest is a celebration of excellence, passion, and the unifying power of sports.",
     ],
   },
 ] as const;

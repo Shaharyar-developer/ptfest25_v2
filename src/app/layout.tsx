@@ -19,8 +19,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "PTMUN VI / 2025",
-  description: "Pak-Turk Model United Nations - Conference 2025",
+  title: "PTFest 2025 - Sports Event",
+  description: "Pak-Turk Maarif International Schools - Sports Festival 2025",
 };
 
 export const viewport: Viewport = {

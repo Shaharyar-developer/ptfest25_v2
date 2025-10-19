@@ -16,8 +16,8 @@ export const CodeOfConductSection = () => {
               <GradientText text={codeOfConduct.title} />
             </h2>
             <p className="text-muted-foreground text-sm">
-              These are the expected standards of behavior during the
-              conference.
+              The rules, regulations, and code of conduct for all athletes and
+              spectators.
             </p>
           </div>
         </BlurFade>
