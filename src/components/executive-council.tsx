@@ -10,7 +10,7 @@ import { Badge } from "./ui/badge";
 export const ExecutiveCouncilSection = () => {
   return (
     <section className="w-full px-4 py-16" id="executive-council">
-      <div className="grid grid-cols-1 lg:grid-cols-[300px_1fr] gap-8">
+      <div className="flex flex-col gap-8">
         <BlurFade inView viewport={{ once: true }} className="px-2 relative">
           <div className="lg:sticky lg:top-28 ml-2 h-fit">
             <h2 className="text-3xl font-bold mb-4 text-primary">
@@ -27,7 +27,7 @@ export const ExecutiveCouncilSection = () => {
             inView
             delay={0.12}
             offset={24}
-            className="rounded-3xl border border-border/20 bg-foreground/5 backdrop-blur-3xl p-6 group"
+            className="rounded-3xl border border-border/20 bg-card/40 backdrop-blur-3xl p-6 group"
           >
             <div className="flex flex-wrap items-center gap-3 mb-4">
               <Badge variant="outline">Leadership & Organization</Badge>
@@ -40,7 +40,7 @@ export const ExecutiveCouncilSection = () => {
               {executiveCouncil.map((group) => (
                 <div
                   key={group.role}
-                  className="rounded-2xl border border-border/50 bg-card/30 p-5 backdrop-blur-xl space-y-4"
+                  className="rounded-2xl border border-border/50 bg-card/5 p-5 backdrop-blur-3xl space-y-4"
                 >
                   <div className="flex items-center gap-2">
                     <PhoneCall className="size-4 text-primary" />

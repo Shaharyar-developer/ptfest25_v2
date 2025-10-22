@@ -17,7 +17,7 @@ export const Logo = () => {
   const item: Variants = {
     hidden: {
       opacity: 0,
-      stroke: "url(#grad1)",
+      stroke: "#fff",
       fill: "transparent",
       x: -100,
       y: -100,
@@ -25,8 +25,8 @@ export const Logo = () => {
     },
     show: {
       opacity: 1,
-      stroke: "url(#grad1)",
-      fill: "url(#grad1)",
+      stroke: "#fff",
+      fill: "#fff",
       x: 0,
       y: 0,
       scale: 1,
@@ -79,17 +79,14 @@ export const Logo = () => {
           <stop offset="0%" style={{ stopColor: "#70D0FF", stopOpacity: 1 }} />
           <stop
             offset="100%"
-            style={{ stopColor: "#778AFF", stopOpacity: 1 }}
+            style={{ stopColor: "#ffffff", stopOpacity: 1 }}
           />
         </linearGradient>
       </defs>
       <defs>
         <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="0%">
-          <stop offset="0%" style={{ stopColor: "#A9B2FF", stopOpacity: 1 }} />
-          <stop
-            offset="100%"
-            style={{ stopColor: "#6683FF", stopOpacity: 1 }}
-          />
+          <stop offset="0%" style={{ stopColor: "#fff", stopOpacity: 1 }} />
+          <stop offset="100%" style={{ stopColor: "#fff", stopOpacity: 1 }} />
         </linearGradient>
       </defs>
       <g>

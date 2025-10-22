@@ -11,59 +11,82 @@ export const About = () => {
   const icons = [Info, CalendarDays, PartyPopper];
 
   return (
-    <section className="relative w-full px-4 py-16" id="about">
-      <div className="relative grid grid-cols-1 lg:grid-cols-[300px_1fr] gap-8">
-        <BlurFade inView viewport={{ once: true }} className="px-2 relative">
-          <div className="lg:sticky lg:top-28 h-fit ml-2">
-            <h2 className="text-3xl font-bold mb-4 text-primary">
-              <GradientText text="About PTFest" />
-            </h2>
-            <p className="text-muted-foreground text-sm">
-              Get to know the story, vision, and athletic excellence behind the
-              event.
-            </p>
-          </div>
-        </BlurFade>
+    <section className="relative w-full px-4 py-20" id="about">
+      {/* Section header */}
+      <div className="mb-12 animate-in blur-in fade-in">
+        <div className="flex flex-col gap-2 max-w-2xl">
+          <h2 className="text-4xl md:text-5xl font-bold">
+            <GradientText text="About PTFest" />
+          </h2>
+          <p className="text-lg text-muted-foreground">
+            Get to know the story, vision, and athletic excellence behind the
+            event.
+          </p>
+        </div>
+      </div>
 
-        {/* Timeline cards */}
-        <div className="relative">
-          <div className="space-y-0.5">
-            {about.map((item, idx) => {
-              const Icon = icons[idx] ?? Info;
-              return (
-                <motion.article
-                  key={item.heading}
-                  initial={{ opacity: 0, y: 24 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, amount: 0.2 }}
-                  transition={{ duration: 0.4, delay: idx * 0.05 }}
+      {/* Timeline flow - horizontal staggered cards */}
+      <div className="relative">
+        {/* Decorative line */}
+
+        <div className="space-y-6 lg:space-y-8">
+          {about.map((item, idx) => {
+            const Icon = icons[idx] ?? Info;
+            const isEven = idx % 2 === 0;
+
+            return (
+              <motion.article
+                key={item.heading}
+                initial={{ opacity: 0, x: isEven ? -30 : 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ duration: 0.5, delay: idx * 0.1 }}
+                className={cn(
+                  "grid grid-cols-1 lg:grid-cols-2 gap-6 items-center",
+                  isEven ? "lg:text-right" : ""
+                )}
+              >
+                {/* Content */}
+                <div
                   className={cn(
-                    "relative first:rounded-t-3xl last:rounded-b-3xl bg-foreground/5 p-6 backdrop-blur-3xl",
-                    "hover:border-primary/30 transition-colors"
+                    "animate-in blur-in fade-in",
+                    isEven ? "lg:order-2" : ""
                   )}
                 >
-                  <div className="flex items-start gap-2">
-                    <div>
-                      <h3 className="text-lg font-semibold inline-flex items-center gap-4">
-                        <div className="px-2 py-1 shrink-0">
-                          <Icon className="size-6" />
-                        </div>
+                  <div className="space-y-4">
+                    <div
+                      className={cn(
+                        "flex items-center gap-3",
+                        isEven && "lg:justify-end"
+                      )}
+                    >
+                      <div className="p-3 rounded-xl bg-primary/15 w-fit">
+                        <Icon className="size-6 text-primary" />
+                      </div>
+                      <h3 className="text-xl font-bold leading-tight">
                         {item.heading}
                       </h3>
-                      <div className="mt-1 text-sm leading-relaxed text-muted-foreground text-justify flex flex-col ml-8 gap-1.5">
-                        {item.content.map((line, i) => (
-                          <p key={i}>
-                            {line}
-                            <br />
-                          </p>
-                        ))}
-                      </div>
+                    </div>
+                    <div className="space-y-2 text-muted-foreground leading-relaxed">
+                      {item.content.map((line, i) => (
+                        <p key={i} className="text-sm">
+                          {line}
+                        </p>
+                      ))}
                     </div>
                   </div>
-                </motion.article>
-              );
-            })}
-          </div>
+                </div>
+
+                {/* Accent element */}
+                <div
+                  className={cn(
+                    "hidden lg:flex items-center justify-center",
+                    isEven ? "lg:order-1" : ""
+                  )}
+                ></div>
+              </motion.article>
+            );
+          })}
         </div>
       </div>
     </section>

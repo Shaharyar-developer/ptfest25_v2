@@ -6,12 +6,6 @@ import { BlurFade } from "@/components/magicui/blur-fade";
 import { Logo } from "@/components/icons/logo";
 import { StarsBackground } from "@/components/animate-ui/backgrounds/stars";
 
-// Lazy load heavy animation components
-const BubbleBackground = dynamic(() =>
-  import("@/components/animate-ui/components/backgrounds/bubble").then(
-    (mod) => ({ default: mod.BubbleBackground })
-  )
-);
 // Lazy load below-the-fold components
 const About = dynamic(() =>
   import("@/components/about").then((mod) => ({ default: mod.About }))
@@ -40,21 +34,37 @@ const CodeOfConductSection = dynamic(() =>
 export default function Home() {
   return (
     <div className="min-h-screen h-full">
-      <StarsBackground className="fixed inset-0" />
-      <Logo />
-      <div className="min-h-screen flex items-center justify-center relative">
+      {/* Background */}
+      <StarsBackground className="fixed inset-0 z-0" />
+
+      {/* Logo */}
+
+      {/* Hero Section - Full viewport height */}
+      <div className="min-h-screen flex items-center justify-center relative z-10">
         <Hero />
       </div>
-      <div className="max-w-7xl mx-auto relative lg:mt-20">
-        <div className="flex flex-col gap-24 lg:gap-32 pb-24 lg:pb-40">
+
+      {/* Main content container with improved spacing */}
+      <div className="lg:max-w-7xl mx-auto relative z-10">
+        <div className="flex flex-col gap-20 pb-24 lg:pb-40 px-4 lg:px-0">
+          {/* Invitation Section */}
           <InvitationSection />
+
+          {/* About Section */}
           <About />
+
+          {/* Committees/Sports Section */}
           <CommitteesShowcase />
+
+          {/* Registration Section */}
           <RegistrationSection />
+
+          {/* Executive Council Section */}
           <ExecutiveCouncilSection />
+
+          {/* Code of Conduct Section */}
           <CodeOfConductSection />
         </div>
-        <div className="absolute w-px h-full left-0 top-0 bg-gradient-to-t from-indigo-500/10 via-primary to-indigo-500/10" />
       </div>
     </div>
   );

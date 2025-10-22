@@ -8,121 +8,117 @@ import { CalendarDays, MapPin, Sparkles } from "lucide-react";
 import Link from "next/link";
 import { Button } from "./ui/button";
 import { cn } from "@/lib/utils";
+import { PiInstagramLogo } from "react-icons/pi";
 
 export const InvitationSection = () => {
   const { title, tagline, campus, dates, greeting, paragraphs, socials } =
     invitationCopy;
 
   return (
-    <section className="w-full px-4 py-16" id="invitation">
-      <div className="grid grid-cols-1 lg:grid-cols-[300px_1fr] gap-8">
-        <BlurFade inView viewport={{ once: true }} className="px-2 relative">
-          <div className="lg:sticky lg:top-28 ml-2 h-fit">
-            <h2 className="text-3xl font-bold mb-4 text-primary">
-              <GradientText text={title} />
-            </h2>
-            <p className="text-muted-foreground text-sm">
-              A warm welcome to PTFEST'25 and everything the 2025 edition stands
-              for.
-            </p>
-          </div>
-        </BlurFade>
+    <section className="w-full px-4 py-20" id="invitation">
+      {/* Section header - full width */}
+      <div className="mb-12 animate-in blur-in fade-in">
+        <div className="flex flex-col gap-2">
+          <h2 className="text-4xl md:text-5xl font-bold">
+            <GradientText text={title} />
+          </h2>
+          <p className="text-lg text-muted-foreground max-w-2xl">
+            A warm welcome to PTFEST'25 and everything the 2025 edition stands
+            for.
+          </p>
+        </div>
+      </div>
 
-        <div className="space-y-6">
-          <BlurFade
-            inView
-            delay={0.1}
-            offset={24}
-            className={cn(
-              "bg-foreground/5 backdrop-blur-3xl p-6 rounded-3xl border border-border/20",
-              "flex flex-col gap-6"
-            )}
-          >
+      {/* Main content grid - asymmetric */}
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
+        {/* Large featured card - left side */}
+        <div className="lg:col-span-2 animate-in blur-in fade-in">
+          <div className="group rounded-3xl border border-border/30 bg-gradient-to-br from-foreground/8 to-foreground/3 backdrop-blur-3xl p-8 hover:border-primary/30 transition-all h-full flex flex-col gap-6">
             <div className="flex flex-wrap items-center gap-3">
-              <Badge variant="outline" className="uppercase tracking-wide">
+              <Badge
+                variant="outline"
+                className="uppercase tracking-wide text-xs"
+              >
                 {tagline}
               </Badge>
               <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                <Sparkles className="size-4" />
-                Three days of athletic excellence
+                <Sparkles className="size-4 text-primary" />
+                <span>Three days of excellence</span>
               </div>
             </div>
 
-            <div className="space-y-2 text-sm text-muted-foreground">
-              <p className="font-medium text-foreground">{greeting}</p>
-              {paragraphs.map((paragraph, idx) => (
-                <p key={idx} className="leading-relaxed text-justify">
-                  {paragraph}
-                </p>
-              ))}
-            </div>
-
-            <div className="grid gap-4 sm:grid-cols-2">
-              <div className="rounded-2xl border border-border/50 bg-card/30 p-4 backdrop-blur-xl">
-                <div className="flex items-start gap-3">
-                  <CalendarDays className="size-5 text-primary" />
-                  <div>
-                    <p className="text-xs uppercase tracking-wide text-muted-foreground">
-                      Event Dates
-                    </p>
-                    <p className="text-sm font-medium text-foreground">
-                      {dates}
-                    </p>
-                  </div>
-                </div>
+            <div className="space-y-4">
+              <p className="font-semibold text-foreground text-lg">
+                {greeting}
+              </p>
+              <div className="space-y-3">
+                {paragraphs.map((paragraph, idx) => (
+                  <p
+                    key={idx}
+                    className="leading-relaxed text-muted-foreground"
+                  >
+                    {paragraph}
+                  </p>
+                ))}
               </div>
-              <div className="rounded-2xl border border-border/50 bg-card/30 p-4 backdrop-blur-xl">
-                <div className="flex items-start gap-3">
-                  <MapPin className="size-5 text-primary" />
-                  <div>
-                    <p className="text-xs uppercase tracking-wide text-muted-foreground">
-                      Venue
-                    </p>
-                    <p className="text-sm font-medium text-foreground">
-                      {campus}
-                    </p>
-                  </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Side info cards - stacked */}
+        <div className="flex flex-col gap-4">
+          <div className="animate-in blur-in fade-in">
+            <div className="rounded-2xl border border-border/30 bg-card/40 backdrop-blur-xl p-6 hover:border-primary/40 transition-all">
+              <div className="flex items-start gap-3">
+                <CalendarDays className="size-5 text-primary shrink-0 mt-1" />
+                <div>
+                  <p className="text-xs uppercase tracking-widest text-muted-foreground font-semibold">
+                    Event Dates
+                  </p>
+                  <p className="text-sm font-semibold text-foreground mt-2">
+                    {dates}
+                  </p>
                 </div>
               </div>
             </div>
+          </div>
 
-            <div className="flex flex-wrap items-center gap-3 text-sm text-muted-foreground">
-              <span className="font-medium text-foreground">Connect:</span>
+          <div className="animate-in blur-in fade-in grow">
+            <div className="rounded-2xl border border-border/30 bg-card/40 backdrop-blur-xl p-6 hover:border-primary/40 transition-all">
+              <div className="flex items-start gap-3">
+                <MapPin className="size-5 text-primary shrink-0 mt-1" />
+                <div>
+                  <p className="text-xs uppercase tracking-widest text-muted-foreground font-semibold">
+                    Venue
+                  </p>
+                  <p className="text-sm font-semibold text-foreground mt-2">
+                    {campus}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          {/* Social connections - bottom bar */}
+
+          <div className="animate-in blur-in fade-in">
+            <div className="rounded-2xl border border-border/30 bg-card/40 backdrop-blur-xl p-6 flex flex-row items-center justify-between gap-4">
+              <span className="font-semibold inline-flex items-center gap-2 text-foreground text-sm">
+                <PiInstagramLogo className="size-5 text-primary" /> Connect with
+                us:
+              </span>
               <Link
                 href="https://www.instagram.com/ptfest25/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-primary transition-colors"
+                className="text-muted-foreground hover:text-primary transition-colors text-sm font-medium"
               >
-                {socials.instagram}
-              </Link>
-              <span aria-hidden="true" className="text-border">
-                •
-              </span>
-              <Link
-                href={`https://${socials.website}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-primary transition-colors"
-              >
-                {socials.website}
+                {socials.instagram} ↗
               </Link>
             </div>
-
-            <div className="flex flex-wrap gap-3 pt-2">
-              <Button asChild>
-                <Link
-                  href={registrationDetails.forms[0].href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Register a Team
-                </Link>
-              </Button>
-            </div>
-          </BlurFade>
+          </div>
         </div>
       </div>
     </section>
   );
 };
+           

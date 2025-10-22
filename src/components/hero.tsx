@@ -72,61 +72,74 @@ const CARDS = [
 
 export const Hero = () => {
   return (
-    <div className="w-full mx-auto flex flex-col items-center justify-center container">
-      <div className="flex flex-col items-center justify-center h-[20vh] md:h-[20vh] ">
-        <Suspense>
-          <Globe />
-        </Suspense>
-      </div>
-
-      <div className="rounded-3xl pointer-events-none relative pt-[30svh] z-50">
-        <BlurFade className="max-w-3xl" delay={0.2}>
-          <div className="my-auto h-full flex flex-col px-5 items-center justify-center">
-            <motion.p className="mt-4 text-lg md:text-lg text-foreground p-1 backdrop-blur-3xl bg-card/75 rounded-3xl px-3">
-              <span className="font-medium">21-23 Nov 2025</span> ·{" "}
-              <span className="uppercase tracking-wide">PTFest'25</span>
-            </motion.p>
-
-            <h1 className="mt-6 text-4xl md:text-5xl xl:text-7xl font-bold text-center !leading-[1.2] tracking-tight">
-              Where Athletics Meet <GradientText text="Excellence!" />
-            </h1>
+    <div className="w-full mx-auto flex flex-col container">
+      {/* Asymmetric grid layout - globe on left, content on right */}
+      <div className="lg:grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center py-12 lg:py-20 px-3">
+        {/* Left: Globe with asymmetric positioning */}
+        <BlurFade className="order-2 lg:order-1" delay={0.1}>
+          <div className="flex items-center justify-center h-60 lg:h-auto">
+            <Suspense>
+              <div className="relative w-full aspect-square max-w-sm">
+                <Logo />
+              </div>
+            </Suspense>
           </div>
         </BlurFade>
-      </div>
 
-      <div className="px-4 lg:py-8 py-4 lg:px-0">
-        <div className="flex flex-col lg:grid lg:grid-cols-4 lg:gap-4">
-          <MotionHighlight hover className="rounded-3xl">
-            {CARDS.map((card, idx) => (
-              <BlurFade key={card.value} delay={(idx + 0.5) * 0.2}>
+        {/* Right: Content with vertical emphasis */}
+        <div className="order-1 lg:order-2 flex flex-col gap-6 animate-in slide-in-from-bottom-5 fade-in-5 delay-200 duration-500">
+          <div className="flex flex-col gap-3">
+            <motion.p className="text-sm md:text-base font-medium p-2 backdrop-blur-3xl bg-card/50 rounded-2xl px-4 w-fit border border-border/30">
+              <span className="font-semibold">21-23 Nov 2025</span> ·{" "}
+              <span className="uppercase tracking-wide text-primary">
+                Live Event
+              </span>
+            </motion.p>
+
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight tracking-tighter">
+              Where Athletics Meet <GradientText text="Excellence" />
+            </h1>
+
+            <p className="text-lg text-muted-foreground max-w-lg leading-relaxed">
+              Join Pakistan's premier inter-school sports festival celebrating
+              excellence, athleticism, and camaraderie.
+            </p>
+          </div>
+
+          {/* CTA Cards - Horizontal layout */}
+          <div className="flex flex-col sm:flex-row gap-3 pt-2">
+            {CARDS.slice(0, 2).map((card, idx) => (
+              <div
+                className="animate-in slide-in-from-bottom-5 fade-in-5 delay-200 duration-500"
+                key={card.value}
+              >
                 <Link
                   href={card.href}
                   target={card.href.includes("#about") ? undefined : "_blank"}
                   rel="noopener noreferrer"
+                  className="flex-1"
                 >
-                  <motion.div
-                    whileTap={{ scale: 0.97 }}
-                    className={cn(
-                      "cursor-pointer flex items-center gap-4 p-4 transition-colors",
-                      "first:rounded-t-3xl last:rounded-b-3xl",
-                      "lg:flex-col lg:items-center lg:justify-center",
-                      "lg:rounded-3xl lg:shadow-none lg:divide-y-0"
-                    )}
+                  <motion.button
+                    whileHover={{ scale: 1.02 }}
+                    whileTap={{ scale: 0.98 }}
+                    className="w-full flex items-center gap-3 p-3 rounded-2xl border border-border/30 bg-card/40 backdrop-blur-xl hover:bg-card/60 hover:border-primary/30 transition-all group"
                   >
-                    <div className="p-3 rounded-xl bg-primary/10 lg:mb-2">
-                      <card.icon className="text-primary text-xl lg:text-2xl" />
+                    <div className="p-2 rounded-lg bg-primary/15 group-hover:bg-primary/25 transition-colors">
+                      <card.icon className="text-primary text-lg" />
                     </div>
-                    <div className="flex flex-col lg:items-center lg:text-center">
-                      <p className="text-base font-semibold">{card.title}</p>
-                      <p className="text-sm text-muted-foreground">
+                    <div className="flex flex-col items-start">
+                      <span className="text-sm font-semibold">
+                        {card.title}
+                      </span>
+                      <span className="text-xs text-muted-foreground">
                         {card.description}
-                      </p>
+                      </span>
                     </div>
-                  </motion.div>
+                  </motion.button>
                 </Link>
-              </BlurFade>
+              </div>
             ))}
-          </MotionHighlight>
+          </div>
         </div>
       </div>
     </div>
