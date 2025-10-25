@@ -27,10 +27,6 @@ export const CodeOfConductSection = () => {
         {codeOfConduct.categories.map((category, idx) => (
           <motion.div
             key={category.heading}
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.2 }}
-            transition={{ duration: 0.4, delay: idx * 0.08 }}
             className={cn(
               "rounded-3xl border border-border/30 bg-gradient-to-br from-foreground/8 to-foreground/3 backdrop-blur-3xl p-8 animate-in blur-in fade-in",
               "hover:border-primary/40 transition-all group"
@@ -52,7 +48,7 @@ export const CodeOfConductSection = () => {
             </div>
 
             {/* Rules List */}
-            <ol className="space-y-3 pl-4 text-sm text-muted-foreground leading-relaxed">
+            <ul className="space-y-3 pl-4 text-sm text-muted-foreground leading-relaxed list-disc!">
               {category.rules.map((rule, i) => (
                 <motion.li
                   key={i}
@@ -60,15 +56,13 @@ export const CodeOfConductSection = () => {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true, amount: 0.3 }}
                   transition={{ delay: i * 0.03 }}
-                  className="flex gap-3"
+                  className="flex gap-3 list-disc items-start"
                 >
-                  <span className="text-primary font-bold shrink-0">
-                    {i + 1}.
-                  </span>
+                  <span className="text-primary font-bold shrink-0">.</span>
                   <span>{rule}</span>
                 </motion.li>
               ))}
-            </ol>
+            </ul>
           </motion.div>
         ))}
       </div>

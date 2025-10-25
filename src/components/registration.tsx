@@ -39,10 +39,6 @@ export const RegistrationSection = () => {
             >
               {registrationDetails.highlight.earlyBirdDeadline}
             </Badge>
-            <div className="flex items-center gap-2 text-sm text-muted-foreground">
-              <UsersRound className="size-4" />
-              Limited slots per committee
-            </div>
           </div>
 
           <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
@@ -163,7 +159,7 @@ export const RegistrationSection = () => {
       </div>
 
       {/* Registration Team */}
-      <div className="animate-in blur-in fade-in duration-700 delay-300">
+      {/* <div className="animate-in blur-in fade-in duration-700 delay-300">
         <div className="rounded-2xl border border-border/30 bg-card/40 backdrop-blur-3xl p-6">
           <div className="flex items-center gap-2 mb-4">
             <div className="p-1.5 rounded-lg bg-primary/15">
@@ -196,7 +192,7 @@ export const RegistrationSection = () => {
             ))}
           </div>
         </div>
-      </div>
+      </div> */}
     </section>
   );
 };
