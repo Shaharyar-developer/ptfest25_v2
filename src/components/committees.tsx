@@ -24,8 +24,8 @@ export const CommitteesShowcase = () => {
               <GradientText text="Sports" />
             </h2>
             <p className="text-lg text-muted-foreground">
-              Explore the sports featured at PTFest 2025 with complete rules and
-              regulations. (click to expand)
+              Explore the sports featured at PTMFest 2025 with complete rules
+              and regulations. (click to expand)
             </p>
           </div>
         </div>

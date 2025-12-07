@@ -19,7 +19,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "PTFest 2025 - Sports Event",
+  title: "PTMFest 2025 - Sports Event",
   description: "Pak-Turk Maarif International Schools - Sports Festival 2025",
 };
 

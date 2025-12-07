@@ -16,7 +16,7 @@ export const About = () => {
       <div className="mb-12 animate-in blur-in fade-in">
         <div className="flex flex-col gap-2 max-w-2xl">
           <h2 className="text-4xl md:text-5xl font-bold">
-            <GradientText text="About PTFest" />
+            <GradientText text="About PTMFest" />
           </h2>
           <p className="text-lg text-muted-foreground">
             Get to know the story, vision, and athletic excellence behind the

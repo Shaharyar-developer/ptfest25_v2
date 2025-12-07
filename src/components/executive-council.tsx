@@ -17,7 +17,7 @@ export const ExecutiveCouncilSection = () => {
               <GradientText text="Event Leadership" />
             </h2>
             <p className="text-muted-foreground text-sm">
-              Reach out to the leadership team organizing PTFest 2025.
+              Reach out to the leadership team organizing PTMFest 2025.
             </p>
           </div>
         </BlurFade>
@@ -33,7 +33,7 @@ export const ExecutiveCouncilSection = () => {
               <Badge variant="outline">Leadership & Organization</Badge>
               <div className="flex items-center gap-2 text-sm text-muted-foreground">
                 <Users className="size-4" />
-                The team behind PTFest
+                The team behind PTMFest
               </div>
             </div>
             <div className="grid gap-4 sm:grid-cols-3">

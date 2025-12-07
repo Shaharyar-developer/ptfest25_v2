@@ -17,7 +17,7 @@ export const codeOfConduct = {
       icon: <Handshake size={24} />,
       description: "Core principles of ethical athletic competition.",
       rules: [
-        "All athletes, teams, and spectators must adhere to this Code of Conduct throughout all PTFest 2025 activities.",
+        "All athletes, teams, and spectators must adhere to this Code of Conduct throughout all PTMFest 2026 activities.",
         "All participants are responsible for respectful behavior towards other teams, officials, and spectators.",
         "Disrespectful, abusive, or offensive behavior towards any athlete, official, or guest will not be tolerated.",
         "Harassment of any individual based on race, gender, ethnicity, religion, disability, or any other criteria is strictly prohibited.",
@@ -29,9 +29,9 @@ export const codeOfConduct = {
     {
       heading: "Facilities and Equipment",
       icon: <Library size={24} />,
-      description: "Proper use of PTFest venues and sporting equipment.",
+      description: "Proper use of PTMFest venues and sporting equipment.",
       rules: [
-        "All PTFest facilities, equipment, and grounds must be treated with respect and care.",
+        "All PTMFest facilities, equipment, and grounds must be treated with respect and care.",
         "Any act of vandalism, property damage, or misuse of facilities will result in disciplinary action and potential liability.",
         "Teams must properly store and return all borrowed equipment after use.",
         "Participants must maintain cleanliness of facilities and grounds during and after activities.",
@@ -91,7 +91,7 @@ export const codeOfConduct = {
       rules: [
         "Violations may result in warnings, penalties, suspension from matches, or disqualification.",
         "Match officials have the authority to issue yellow and red cards in applicable sports.",
-        "Serious violations may result in immediate disqualification from PTFest 2025.",
+        "Serious violations may result in immediate disqualification from PTMFest 2026.",
         "Event organizers reserve the right to disqualify any participant or team for serious misconduct.",
         "Parents/guardians will be notified of any serious violations or disciplinary actions.",
         "All decisions by officials are final and binding.",
@@ -103,17 +103,17 @@ export const codeOfConduct = {
 export type About = typeof about;
 export const about = [
   {
-    heading: "PTFest 2025 Overview",
+    heading: "PTMFest 2026 Overview",
     content: [
-      "PTFest 2025 is a premier three-day sports extravaganza organized by Pak-Turk Maarif International Schools.",
-      "Taking place from 21-23 November 2025 at the Pak-Turk Maarif Boys Campus in Lahore, the event welcomes athletes from leading schools across the city to compete in over 12 thrilling sports and activities.",
+      "PTMFest 2026 is a premier three-day sports extravaganza organized by Pak-Turk Maarif International Schools.",
+      "Taking place from 10 | 11 - 16 | 17 | 18 January 2026 at the Pak-Turk Maarif Boys Campus in Lahore, the event welcomes athletes from leading schools across the city to compete in over 12 thrilling sports and activities.",
       "Experience Excellence as the campus transforms into a hub for competitive sports, athletic achievement, and school pride.",
     ],
   },
   {
     heading: "Sports & Activities",
     content: [
-      "PTFest 2025 features a diverse range of sports including Futsal, Basketball, Cricket, Volleyball, Badminton, and more.",
+      "PTMFest 2026 features a diverse range of sports including Futsal, Basketball, Cricket, Volleyball, Badminton, and more.",
       "Beyond traditional sports, the event showcases esports competitions (FIFA and Tekken), mind games (Chess, Ludo, Snooker), and physical challenges (Strongman, Tug of War).",
       "From team sports to individual competitions, there's something for every athlete to showcase their talent and passion.",
     ],
@@ -121,9 +121,9 @@ export const about = [
   {
     heading: "Community & Values",
     content: [
-      "PTFest celebrates athleticism, teamwork, sportsmanship, and school spirit among participating institutions including LGS, BSS, LACAS, CITI, ROOTS, PGC, SICAS, and Aitchison.",
+      "PTMFest celebrates athleticism, teamwork, sportsmanship, and school spirit among participating institutions including LGS, BSS, LACAS, CITI, ROOTS, PGC, SICAS, and Aitchison.",
       "The event promotes values of fair play, collaboration, and healthy competition while creating unforgettable memories for athletes and spectators alike.",
-      "Whether you're competing or cheering, PTFest is a celebration of excellence, passion, and the unifying power of sports.",
+      "Whether you're competing or cheering, PTMFest is a celebration of excellence, passion, and the unifying power of sports.",
     ],
   },
 ] as const;

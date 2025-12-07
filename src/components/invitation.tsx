@@ -23,7 +23,7 @@ export const InvitationSection = () => {
             <GradientText text={title} />
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl">
-            A warm welcome to PTFEST'25 and everything the 2025 edition stands
+            A warm welcome to PTMFest'25 and everything the 2025 edition stands
             for.
           </p>
         </div>
@@ -107,7 +107,7 @@ export const InvitationSection = () => {
                 us:
               </span>
               <Link
-                href="https://www.instagram.com/ptfest25/"
+                href="https://www.instagram.com/PTMFest25/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-primary transition-colors text-sm font-medium"

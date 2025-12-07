@@ -2,18 +2,18 @@ export const invitationCopy = {
   title: "Invitation",
   tagline: "Where Athletics Meet Excellence",
   campus: "Pak-Turk Maarif Boys Campus, Lahore",
-  dates: "21-23 November 2025",
+  dates: "10 | 11 - 16 | 17 | 18 January 2026",
   greeting: "Esteemed Participants & Spectators,",
   paragraphs: [
-    "Pak-Turk Maarif International Schools proudly present PTFest 2025, a spectacular three-day sports extravaganza celebrating athleticism, teamwork, and school spirit.",
-    "Hosted at the Pak-Turk Maarif Boys Campus in Lahore from 21-23 November 2025, PTFest brings together students from leading institutions across Lahore to compete, collaborate, and excel in a dynamic environment of rivalry and camaraderie.",
+    "Pak-Turk Maarif International Schools proudly present PTMFest 2026, a spectacular three-day sports extravaganza celebrating athleticism, teamwork, and school spirit.",
+    "Hosted at the Pak-Turk Maarif Boys Campus in Lahore from 10 | 11 - 16 | 17 | 18 January 2026, PTMFest brings together students from leading institutions across Lahore to compete, collaborate, and excel in a dynamic environment of rivalry and camaraderie.",
     "This annual event showcases the finest in competitive sports, featuring over 12 thrilling activities from traditional sports to esports and mind games.",
     "Participating schools include LGS, BSS, LACAS, CITI, ROOTS, PGC, SICAS, and Aitchison, creating an unforgettable experience for both athletes and spectators.",
     "Join us for three days of unparalleled athletic excellence, sportsmanship, and celebration as we transform our campus into a vibrant arena buzzing with energy and passion.",
   ],
   socials: {
-    instagram: "@ptfest25",
-    website: "ptfest.com",
+    instagram: "@ptmfest26",
+    website: "ptmfest.com",
   },
 };
 
@@ -29,9 +29,9 @@ export const registrationDetails = {
     },
   ],
   guidelines: [
-    "Team and individual registration forms are available through the official PTFest portal.",
+    "Team and individual registration forms are available through the official PTMFest portal.",
     "Registrations are confirmed only once payment is received and verified by the Registrations Team.",
-    "All payments made towards PTFest 2025 are strictly non-refundable.",
+    "All payments made towards PTMFest 2026 are strictly non-refundable.",
     "Each team must adhere to sport-specific rules and regulations outlined in the guidelines.",
   ],
   payments: [
@@ -47,25 +47,32 @@ export const registrationDetails = {
     },
   ],
   highlight: {
-    earlyBirdDeadline: "Registration closes on 15 November 2025",
+    earlyBirdDeadline: "Till 30th December",
   },
 };
 
 export const feeStructure = [
   {
-    title: "Early Registration",
-    caption: "Valid till 8 November",
+    title: "Delegation Fee",
+    caption: "3000",
+    items: [{ label: "Delegation Fee", value: "3000" }],
+  },
+  {
+    title: "Early Bird Registrations",
+    caption: "Till 30th December",
     items: [
-      { label: "Individual Entry", value: "PKR 1,500" },
-      { label: "Team Entry (5 Players)", value: "PKR 5,000" },
+      { label: "1 Sport", value: "1300" },
+      { label: "2 Sports", value: "1500" },
+      { label: "3 Sports", value: "1700" },
     ],
   },
   {
     title: "Regular Registrations",
-    caption: "Applies after 8 November",
+    caption: "",
     items: [
-      { label: "Individual Entry", value: "PKR 2,000" },
-      { label: "Team Entry (5 Players)", value: "PKR 6,500" },
+      { label: "1 Sport", value: "1500" },
+      { label: "2 Sports", value: "1800" },
+      { label: "3 Sports", value: "2000" },
     ],
   },
 ];

@@ -23,7 +23,7 @@ export const RegistrationSection = () => {
             <GradientText text="Registration" />
           </h2>
           <p className="text-lg text-muted-foreground">
-            Everything you need to join PTFest 2025, from forms to contact
+            Everything you need to join PTMFest 2026, from forms to contact
             leads.
           </p>
         </div>
@@ -116,7 +116,7 @@ export const RegistrationSection = () => {
       <div className="mb-8 animate-in blur-in fade-in duration-700 delay-300">
         <div className="rounded-3xl border border-border/30 bg-card/40 backdrop-blur-3xl p-8">
           <h3 className="text-xl font-bold mb-6">Fee Structure</h3>
-          <div className="grid gap-4 sm:grid-cols-2">
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {feeStructure.map((tier) => (
               <motion.div
                 key={tier.title}
