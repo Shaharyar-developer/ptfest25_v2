@@ -59,7 +59,7 @@ const CARDS = [
     icon: MailQuestion,
     title: "Contact",
     description: "Get in touch with us",
-    href: "https://www.instagram.com/PTMFest25/",
+    href: "https://www.instagram.com/PTMFest26/",
   },
   {
     value: "4",

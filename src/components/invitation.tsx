@@ -107,7 +107,7 @@ export const InvitationSection = () => {
                 us:
               </span>
               <Link
-                href="https://www.instagram.com/PTMFest25/"
+                href="https://www.instagram.com/PTMFest26/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-primary transition-colors text-sm font-medium"
