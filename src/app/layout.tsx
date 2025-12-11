@@ -19,8 +19,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "PTMFest 2025 - Sports Event",
-  description: "Pak-Turk Maarif International Schools - Sports Festival 2025",
+  title: "PTMFest 2026 - Sports Event",
+  description: "Pak-Turk Maarif International Schools - Sports Festival 2026",
 };
 
 export const viewport: Viewport = {

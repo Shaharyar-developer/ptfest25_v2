@@ -36,7 +36,7 @@ const Globe = dynamic(
     loading: () => (
       <div className="absolute -top-10 mx-auto aspect-[1/1] w-full max-w-[540px] animate-pulse bg-primary/5 rounded-full" />
     ),
-  }
+  },
 );
 
 const CARDS = [
@@ -90,7 +90,9 @@ export const Hero = () => {
         <div className="order-1 lg:order-2 flex flex-col gap-6 animate-in slide-in-from-bottom-5 fade-in-5 delay-200 duration-500">
           <div className="flex flex-col gap-3">
             <motion.p className="text-sm md:text-base font-medium p-2 backdrop-blur-3xl bg-card/50 rounded-2xl px-4 w-fit border border-border/30">
-              <span className="font-semibold">21-23 November 2025</span>
+              <span className="font-semibold">
+                10 – 11 / 16 – 18 January 2026
+              </span>
             </motion.p>
 
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight tracking-tighter">

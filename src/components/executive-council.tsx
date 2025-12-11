@@ -17,7 +17,7 @@ export const ExecutiveCouncilSection = () => {
               <GradientText text="Event Leadership" />
             </h2>
             <p className="text-muted-foreground text-sm">
-              Reach out to the leadership team organizing PTMFest 2025.
+              Reach out to the leadership team organizing PTMFest 2026.
             </p>
           </div>
         </BlurFade>
