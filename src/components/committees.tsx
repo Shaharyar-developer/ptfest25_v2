@@ -39,7 +39,6 @@ export const CommitteesShowcase = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.2 }}
-              transition={{ duration: 0.3 }}
             >
               <motion.div
                 layoutId={`committee-card-${committee.name}`}
@@ -87,7 +86,7 @@ export const CommitteesShowcase = () => {
         </div>
 
         {/* Modal for selected card */}
-        <AnimatePresence mode="wait">
+        <AnimatePresence mode="popLayout">
           {selected && (
             <motion.div
               className="fixed inset-0 z-50 flex items-center justify-center p-4"
@@ -95,7 +94,6 @@ export const CommitteesShowcase = () => {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={() => setSelected(null)}
-              transition={{ duration: 0.2 }}
             >
               <motion.div
                 initial={{ opacity: 0 }}

@@ -114,44 +114,48 @@ export const RegistrationSection = () => {
 
       {/* Fee Structure */}
       <div className="mb-8 animate-in blur-in fade-in duration-700 delay-300">
-        <div className="rounded-3xl border border-border/30 bg-card/40 backdrop-blur-3xl p-8">
-          <h3 className="text-xl font-bold mb-6">Fee Structure</h3>
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {feeStructure.map((tier) => (
+        <div className="rounded-3xl border border-border/30 bg-card/20 backdrop-blur-3xl overflow-hidden">
+          <div className="px-8 py-6 border-b border-border/30 bg-muted/10 flex items-center gap-3">
+            <div className="p-2 rounded-lg bg-primary/15">
+              <UsersRound className="size-5 text-primary" />
+            </div>
+            <h3 className="text-xl font-bold">Fee Structure</h3>
+          </div>
+
+          <div className="grid md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-border/30">
+            {feeStructure.map((tier, idx) => (
               <motion.div
                 key={tier.title}
-                initial={{ opacity: 0, scale: 0.95 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true, amount: 0.2 }}
-                whileHover={{ y: -4 }}
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: idx * 0.1 }}
+                className="p-8 flex flex-col gap-6 hover:bg-primary/[0.02] transition-colors"
               >
-                <Card className="border-border/50 shadow-none hover:border-primary/30 transition-colors">
-                  <CardHeader className="pb-4">
-                    <CardTitle className="flex flex-col gap-2">
-                      <span className="text-lg font-semibold">
-                        {tier.title}
+                <div>
+                  <h4 className="font-bold text-lg text-foreground">
+                    {tier.title}
+                  </h4>
+                  <p className="text-[10px] font-bold text-muted-foreground uppercase tracking-[0.2em] mt-1">
+                    {tier.caption}
+                  </p>
+                </div>
+
+                <div className="space-y-4">
+                  {tier.items.map((item) => (
+                    <div
+                      key={`${tier.title}-${item.label}`}
+                      className="flex justify-between items-center group/item"
+                    >
+                      <span className="text-sm text-muted-foreground group-hover/item:text-foreground transition-colors">
+                        {item.label}
                       </span>
-                      <span className="text-xs uppercase tracking-wide text-muted-foreground font-normal">
-                        {tier.caption}
+                      <span className="text-sm font-bold text-foreground tabular-nums">
+                        {item.value}
                       </span>
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent className="pb-6">
-                    <ul className="space-y-3 text-sm text-muted-foreground">
-                      {tier.items.map((item) => (
-                        <li
-                          key={`${tier.title}-${item.label}`}
-                          className="flex items-center justify-between"
-                        >
-                          <span>{item.label}</span>
-                          <span className="font-semibold text-foreground">
-                            {item.value}
-                          </span>
-                        </li>
-                      ))}
-                    </ul>
-                  </CardContent>
-                </Card>
+                    </div>
+                  ))}
+                </div>
               </motion.div>
             ))}
           </div>

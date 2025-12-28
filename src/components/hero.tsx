@@ -28,17 +28,6 @@ import {
   PopoverContent,
 } from "./animate-ui/components/radix/popover";
 
-// Lazy load Globe component
-const Globe = dynamic(
-  () => import("./magicui/globe").then((mod) => ({ default: mod.Globe })),
-  {
-    ssr: false,
-    loading: () => (
-      <div className="absolute -top-10 mx-auto aspect-[1/1] w-full max-w-[540px] animate-pulse bg-primary/5 rounded-full" />
-    ),
-  },
-);
-
 const CARDS = [
   {
     value: "1",
@@ -112,30 +101,88 @@ export const Hero = () => {
                 className="animate-in slide-in-from-bottom-5 fade-in-5 delay-200 duration-500"
                 key={card.value}
               >
-                <Link
-                  href={card.href}
-                  target={card.href.includes("#about") ? undefined : "_blank"}
-                  rel="noopener noreferrer"
-                  className="flex-1"
-                >
-                  <motion.button
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
-                    className="w-full flex items-center gap-3 p-3 rounded-2xl border border-border/30 bg-card/40 backdrop-blur-xl hover:bg-card/60 hover:border-primary/30 transition-all group"
+                {card.value === "1" ? (
+                  <Popover>
+                    <PopoverTrigger asChild>
+                      <motion.button
+                        whileHover={{ scale: 1.02 }}
+                        whileTap={{ scale: 0.98 }}
+                        className="w-full flex items-center gap-3 p-3 rounded-2xl border border-border/30 bg-card/40 backdrop-blur-xl hover:bg-card/60 hover:border-primary/30 transition-all group"
+                      >
+                        <div className="p-2 rounded-lg bg-primary/15 group-hover:bg-primary/25 transition-colors">
+                          <card.icon className="text-primary text-lg" />
+                        </div>
+                        <div className="flex flex-col items-start">
+                          <span className="text-sm font-semibold">
+                            {card.title}
+                          </span>
+                          <span className="text-xs text-muted-foreground">
+                            {card.description}
+                          </span>
+                        </div>
+                      </motion.button>
+                    </PopoverTrigger>
+                    <PopoverContent className="w-72 p-1 bg-popover/30 flex flex-col gap-1 backdrop-blur-2xl border-border/40 shadow-2xl rounded-3xl">
+                      <Link
+                        href="https://forms.gle/VdQXyDo4DeGC4TXWA"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="p-3 rounded-3xl hover:bg-primary/10 transition-colors inline-flex gap-2.5 items-center"
+                      >
+                        <Users className="text-primary bg-primary/10 rounded-lg p-2 size-10" />
+                        <div className="flex flex-col gap-0.5">
+                        <span className="text-sm font-bold text-foreground">
+                          <span>Delegation Registration</span>
+                        </span>
+                        <span className="text-[10px] text-muted-foreground uppercase tracking-wider">
+                          School / College Teams
+                        </span>
+                        </div>
+                      </Link>
+                      <Link
+                        href="https://forms.gle/1VraU5gZn7RCZQsD8"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                       className="p-3 rounded-3xl hover:bg-primary/10 transition-colors inline-flex gap-2.5 items-center"
+                      >
+                        <User className="text-primary bg-primary/10 rounded-lg p-2 size-10" />
+                        <div className="flex flex-col gap-0.5">
+                        <span className="text-sm font-bold text-foreground">
+                          Solo Delegation Registration
+                        </span>
+                        <span className="text-[10px] text-muted-foreground uppercase tracking-wider">
+                          Individual Participants
+                        </span>
+                        </div>
+                      </Link>
+                    </PopoverContent>
+                  </Popover>
+                ) : (
+                  <Link
+                    href={card.href}
+                    target={card.href.includes("#about") ? undefined : "_blank"}
+                    rel="noopener noreferrer"
+                    className="flex-1"
                   >
-                    <div className="p-2 rounded-lg bg-primary/15 group-hover:bg-primary/25 transition-colors">
-                      <card.icon className="text-primary text-lg" />
-                    </div>
-                    <div className="flex flex-col items-start">
-                      <span className="text-sm font-semibold">
-                        {card.title}
-                      </span>
-                      <span className="text-xs text-muted-foreground">
-                        {card.description}
-                      </span>
-                    </div>
-                  </motion.button>
-                </Link>
+                    <motion.button
+                      whileHover={{ scale: 1.02 }}
+                      whileTap={{ scale: 0.98 }}
+                      className="w-full flex items-center gap-3 p-3 rounded-2xl border border-border/30 bg-card/40 backdrop-blur-xl hover:bg-card/60 hover:border-primary/30 transition-all group"
+                    >
+                      <div className="p-2 rounded-lg bg-primary/15 group-hover:bg-primary/25 transition-colors">
+                        <card.icon className="text-primary text-lg" />
+                      </div>
+                      <div className="flex flex-col items-start">
+                        <span className="text-sm font-semibold">
+                          {card.title}
+                        </span>
+                        <span className="text-xs text-muted-foreground">
+                          {card.description}
+                        </span>
+                      </div>
+                    </motion.button>
+                  </Link>
+                )}
               </div>
             ))}
           </div>

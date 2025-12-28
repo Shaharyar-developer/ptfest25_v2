@@ -20,12 +20,12 @@ export const invitationCopy = {
 export const registrationDetails = {
   forms: [
     {
-      label: "Team Registration",
+      label: "Delegation Registration",
       href: "https://forms.gle/VdQXyDo4DeGC4TXWA",
     },
     {
-      label: "Individual Registration",
-      href: "https://forms.gle/VdQXyDo4DeGC4TXWA",
+      label: "Solo Delegation Registration",
+      href: "https://forms.gle/1VraU5gZn7RCZQsD8",
     },
   ],
   guidelines: [
