@@ -2,11 +2,11 @@ export const invitationCopy = {
   title: "Invitation",
   tagline: "Where Athletics Meet Excellence",
   campus: "Pak-Turk Maarif Boys Campus, Lahore",
-  dates: "10 | 11 - 16 | 17 | 18 January 2026",
+  dates: "23 - 25 January 2026",
   greeting: "Esteemed Participants & Spectators,",
   paragraphs: [
     "Pak-Turk Maarif International Schools proudly present PTMFest 2026, a spectacular three-day sports extravaganza celebrating athleticism, teamwork, and school spirit.",
-    "Hosted at the Pak-Turk Maarif Boys Campus in Lahore from 10 | 11 - 16 | 17 | 18 January 2026, PTMFest brings together students from leading institutions across Lahore to compete, collaborate, and excel in a dynamic environment of rivalry and camaraderie.",
+    "Hosted at the Pak-Turk Maarif Boys Campus in Lahore from 23 - 25 January 2026, PTMFest brings together students from leading institutions across Lahore to compete, collaborate, and excel in a dynamic environment of rivalry and camaraderie.",
     "This annual event showcases the finest in competitive sports, featuring over 12 thrilling activities from traditional sports to esports and mind games.",
     "Participating schools include LGS, BSS, LACAS, CITI, ROOTS, PGC, SICAS, and Aitchison, creating an unforgettable experience for both athletes and spectators.",
     "Join us for three days of unparalleled athletic excellence, sportsmanship, and celebration as we transform our campus into a vibrant arena buzzing with energy and passion.",
