@@ -80,7 +80,7 @@ export const Hero = () => {
           <div className="flex flex-col gap-3">
             <motion.p className="text-sm md:text-base font-medium p-2 backdrop-blur-3xl bg-card/50 rounded-2xl px-4 w-fit border border-border/30">
               <span className="font-semibold">
-                10 – 11 / 16 – 18 January 2026
+                23 - 25 January 2026
               </span>
             </motion.p>
 
