@@ -123,8 +123,8 @@ export const executiveCouncil = [
   {
     role: "Event Co-Head",
     members: [
-      { name: "Saifullah", phone: "+92 317 2998241" },
       { name: "Awais Khan", phone: "+92 334 7882117" },
+      { name: "Ibrahim Muammar", phone: "+92 323 7617458" },
     ],
   },
   {
