@@ -106,7 +106,7 @@ export const about = [
     heading: "PTMFest 2026 Overview",
     content: [
       "PTMFest 2026 is a premier three-day sports extravaganza organized by Pak-Turk Maarif International Schools.",
-      "Taking place from 10 | 11 - 16 | 17 | 18 January 2026 at the Pak-Turk Maarif Boys Campus in Lahore, the event welcomes athletes from leading schools across the city to compete in over 12 thrilling sports and activities.",
+      "Taking place from 23 - 25 January 2026 at the Pak-Turk Maarif Boys Campus in Lahore, the event welcomes athletes from leading schools across the city to compete in over 12 thrilling sports and activities.",
       "Experience Excellence as the campus transforms into a hub for competitive sports, athletic achievement, and school pride.",
     ],
   },
