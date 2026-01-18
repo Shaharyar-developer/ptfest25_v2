@@ -2,8 +2,11 @@
 import { Badge } from "@/components/ui/badge";
 import {
   ArrowUpRight,
+  BookOpen,
   FileSymlink,
+  FileText,
   Info,
+  Mail,
   MailQuestion,
   MapPin,
   User,
@@ -27,6 +30,27 @@ import {
   PopoverTrigger,
   PopoverContent,
 } from "./animate-ui/components/radix/popover";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "./animate-ui/components/radix/dialog";
+
+const GUIDE_LINKS = [
+  {
+    title: "Hackathon Guide",
+    description: "Round details, rules and requirements",
+    href: "/hackathon-guide.pdf",
+  },
+  {
+    title: "MathMania Guide",
+    description: "Competition guidelines and modules",
+    href: "/mathmania-guide.pdf",
+  },
+];
 
 const CARDS = [
   {
@@ -38,26 +62,54 @@ const CARDS = [
   },
   {
     value: "2",
+    icon: Mail,
+    title: "E-Invite",
+    description: "Download invitation",
+    href: "/e-invite.pdf",
+  },
+  {
+    value: "3",
+    icon: BookOpen,
+    title: "Guides",
+    description: "Event instructions",
+    href: "#",
+  },
+  {
+    value: "4",
     icon: MapPin,
     title: "Location",
     description: "Find the venue",
     href: "https://maps.app.goo.gl/u73xhSQ84uEXnnyv6",
   },
-  {
-    value: "3",
-    icon: MailQuestion,
-    title: "Contact",
-    description: "Get in touch with us",
-    href: "https://www.instagram.com/PTMFest26/",
-  },
-  {
-    value: "4",
-    icon: FileSymlink,
-    title: "Rules",
-    description: "View sport regulations",
-    href: "#about",
-  },
 ];
+
+const CardButton = React.forwardRef<
+  HTMLButtonElement,
+  { icon: any; title: string; description: string; onClick?: () => void }
+>(({ icon: Icon, title, description, onClick, ...props }, ref) => (
+  <motion.button
+    ref={ref}
+    whileHover={{ scale: 1.02 }}
+    whileTap={{ scale: 0.98 }}
+    onClick={onClick}
+    {...props}
+    className="w-full flex items-center gap-3 p-3 rounded-2xl border border-border/30 bg-card/40 backdrop-blur-xl hover:bg-card/60 hover:border-primary/30 transition-all group h-full"
+  >
+    <div className="p-2 rounded-lg bg-primary/15 group-hover:bg-primary/25 transition-colors shrink-0">
+      <Icon className="text-primary text-lg" />
+    </div>
+    <div className="flex flex-col items-start overflow-hidden">
+      <span className="text-sm font-semibold truncate w-full text-left">
+        {title}
+      </span>
+      <span className="text-xs text-muted-foreground truncate w-full text-left">
+        {description}
+      </span>
+    </div>
+  </motion.button>
+));
+CardButton.displayName = "CardButton";
+
 
 export const Hero = () => {
   return (
@@ -94,33 +146,21 @@ export const Hero = () => {
             </p>
           </div>
 
-          {/* CTA Cards - Horizontal layout */}
-          <div className="flex flex-col sm:flex-row gap-3 pt-2">
-            {CARDS.slice(0, 2).map((card, idx) => (
+          {/* CTA Cards - 2x2 Grid layout */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 max-w-lg">
+            {CARDS.map((card, i) => (
               <div
-                className="animate-in slide-in-from-bottom-5 fade-in-5 delay-200 duration-500"
+                className={cn("animate-in slide-in-from-bottom-5 fade-in-5 delay-200 duration-500")}
                 key={card.value}
               >
                 {card.value === "1" ? (
                   <Popover>
                     <PopoverTrigger asChild>
-                      <motion.button
-                        whileHover={{ scale: 1.02 }}
-                        whileTap={{ scale: 0.98 }}
-                        className="w-full flex items-center gap-3 p-3 rounded-2xl border border-border/30 bg-card/40 backdrop-blur-xl hover:bg-card/60 hover:border-primary/30 transition-all group"
-                      >
-                        <div className="p-2 rounded-lg bg-primary/15 group-hover:bg-primary/25 transition-colors">
-                          <card.icon className="text-primary text-lg" />
-                        </div>
-                        <div className="flex flex-col items-start">
-                          <span className="text-sm font-semibold">
-                            {card.title}
-                          </span>
-                          <span className="text-xs text-muted-foreground">
-                            {card.description}
-                          </span>
-                        </div>
-                      </motion.button>
+                      <CardButton
+                        icon={card.icon}
+                        title={card.title}
+                        description={card.description}
+                      />
                     </PopoverTrigger>
                     <PopoverContent className="w-72 p-1 bg-popover/30 flex flex-col gap-1 backdrop-blur-2xl border-border/40 shadow-2xl rounded-3xl">
                       <Link
@@ -131,56 +171,82 @@ export const Hero = () => {
                       >
                         <Users className="text-primary bg-primary/10 rounded-lg p-2 size-10" />
                         <div className="flex flex-col gap-0.5">
-                        <span className="text-sm font-bold text-foreground">
-                          <span>Delegation Registration</span>
-                        </span>
-                        <span className="text-[10px] text-muted-foreground uppercase tracking-wider">
-                          School / College Teams
-                        </span>
+                          <span className="text-sm font-bold text-foreground">
+                            <span>Delegation Registration</span>
+                          </span>
+                          <span className="text-[10px] text-muted-foreground uppercase tracking-wider">
+                            School / College Teams
+                          </span>
                         </div>
                       </Link>
                       <Link
                         href="https://forms.gle/1VraU5gZn7RCZQsD8"
                         target="_blank"
                         rel="noopener noreferrer"
-                       className="p-3 rounded-3xl hover:bg-primary/10 transition-colors inline-flex gap-2.5 items-center"
+                        className="p-3 rounded-3xl hover:bg-primary/10 transition-colors inline-flex gap-2.5 items-center"
                       >
                         <User className="text-primary bg-primary/10 rounded-lg p-2 size-10" />
                         <div className="flex flex-col gap-0.5">
-                        <span className="text-sm font-bold text-foreground">
-                          Solo Delegation Registration
-                        </span>
-                        <span className="text-[10px] text-muted-foreground uppercase tracking-wider">
-                          Individual Participants
-                        </span>
+                          <span className="text-sm font-bold text-foreground">
+                            Solo Delegation Registration
+                          </span>
+                          <span className="text-[10px] text-muted-foreground uppercase tracking-wider">
+                            Individual Participants
+                          </span>
                         </div>
                       </Link>
                     </PopoverContent>
                   </Popover>
+                ) : card.value === "3" ? (
+                  <Dialog>
+                    <DialogTrigger asChild>
+                      <CardButton
+                        icon={card.icon}
+                        title={card.title}
+                        description={card.description}
+                      />
+                    </DialogTrigger>
+                    <DialogContent className="max-w-md bg-card/50 backdrop-blur-2xl border-border/40 shadow-2xl rounded-3xl p-4">
+                      <DialogHeader className="mb-4">
+                        <DialogTitle className="text-xl font-bold">Event Guides</DialogTitle>
+                        <DialogDescription>
+                          Download PDF guides for various modules and activities.
+                        </DialogDescription>
+                      </DialogHeader>
+                      <div className="grid gap-2">
+                        {GUIDE_LINKS.map((guide) => (
+                          <Link
+                            key={guide.href}
+                            href={guide.href}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="p-3 rounded-2xl hover:bg-primary/10 transition-all border border-transparent hover:border-primary/20 flex items-center gap-3 group"
+                          >
+                            <div className="p-2 rounded-xl bg-primary/10 text-primary group-hover:scale-110 transition-transform">
+                              <FileText className="size-5" />
+                            </div>
+                            <div className="flex flex-col">
+                              <span className="font-semibold text-sm">{guide.title}</span>
+                              <span className="text-xs text-muted-foreground line-clamp-1">{guide.description}</span>
+                            </div>
+                            <ArrowUpRight className="ml-auto size-4 text-muted-foreground group-hover:text-primary transition-colors" />
+                          </Link>
+                        ))}
+                      </div>
+                    </DialogContent>
+                  </Dialog>
                 ) : (
                   <Link
                     href={card.href}
-                    target={card.href.includes("#about") ? undefined : "_blank"}
+                        target={card.href.startsWith("http") || card.href.endsWith(".pdf") ? "_blank" : undefined}
                     rel="noopener noreferrer"
-                    className="flex-1"
+                        className="h-full"
                   >
-                    <motion.button
-                      whileHover={{ scale: 1.02 }}
-                      whileTap={{ scale: 0.98 }}
-                      className="w-full flex items-center gap-3 p-3 rounded-2xl border border-border/30 bg-card/40 backdrop-blur-xl hover:bg-card/60 hover:border-primary/30 transition-all group"
-                    >
-                      <div className="p-2 rounded-lg bg-primary/15 group-hover:bg-primary/25 transition-colors">
-                        <card.icon className="text-primary text-lg" />
-                      </div>
-                      <div className="flex flex-col items-start">
-                        <span className="text-sm font-semibold">
-                          {card.title}
-                        </span>
-                        <span className="text-xs text-muted-foreground">
-                          {card.description}
-                        </span>
-                      </div>
-                    </motion.button>
+                        <CardButton
+                          icon={card.icon}
+                          title={card.title}
+                          description={card.description}
+                        />
                   </Link>
                 )}
               </div>
