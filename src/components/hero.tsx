@@ -50,6 +50,11 @@ const GUIDE_LINKS = [
     description: "Competition guidelines and modules",
     href: "/mathmania-guide.pdf",
   },
+  {
+    title: "Schrödinger's Dilemma Guide",
+    description: "Science event instructions and rules",
+    href: '/schrodinger_dillema_guide.pdf'
+  }
 ];
 
 const CARDS = [
